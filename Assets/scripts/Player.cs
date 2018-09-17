@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
     public float speed = 10f;
-    PlayerBulletManager bullet;
+    BulletManager bullet;
     Vector2 min;
     Vector2 max;
 
 	// Use this for initialization
 	void Start () {
-        min = Camera.main.ViewportToWorldPoint(Vector2.zero);
-        max = Camera.main.ViewportToWorldPoint(Vector2.one);
-        bullet = GetComponent<PlayerBulletManager>();
+        bullet = GetComponent<BulletManager>();
 	}
 	
 	// Update is called once per frame
@@ -23,11 +21,13 @@ public class Player : MonoBehaviour {
     private void FixedUpdate()
     {
         move();
-        controller();
+        shot();
     }
 
     void move ()
     {
+        min = Camera.main.ViewportToWorldPoint(Vector2.zero);
+        max = Camera.main.ViewportToWorldPoint(Vector2.one);
         Vector2 size = GetComponent<SpriteRenderer>().bounds.size / 2f;
         Vector2 pos = transform.position;
         Vector2 rot = new Vector2(
@@ -40,10 +40,21 @@ public class Player : MonoBehaviour {
         pos.y = Mathf.Clamp(pos.y, min.y + size.y, max.y - size.y);
         transform.position = pos;
     }
-    void controller ()
-    {
-        if (Input.GetKey(KeyCode.X)) bullet.dango.shot(gameObject);
-        if (Input.GetKey(KeyCode.Z)) bullet.futon.shot(gameObject);
-        if (Input.GetKey(KeyCode.C)) bullet.zabuton.shot(gameObject);
+
+    void shot () {
+        if (Input.GetKey(KeyCode.X))
+        {
+            bullet.equip = 0;
+            bullet.shot(transform);
+        }
+        if (Input.GetKey(KeyCode.Z)) {
+            bullet.equip = 1;
+            bullet.shot(transform);
+        }
+        if (Input.GetKey(KeyCode.C))
+        {
+            bullet.equip = 2;
+            bullet.shot(transform);
+        }
     }
 }

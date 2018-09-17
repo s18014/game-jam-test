@@ -1,0 +1,2 @@
+/Users/yuta/github/game-jam-test/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache
+/Users/yuta/github/game-jam-test/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache

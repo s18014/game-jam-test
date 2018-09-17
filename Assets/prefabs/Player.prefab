@@ -9,22 +9,21 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1855019281337956}
+  m_RootGameObject: {fileID: 1941683578055380}
   m_IsPrefabAsset: 1
---- !u!1 &1855019281337956
+--- !u!1 &1941683578055380
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4467277648119120}
-  - component: {fileID: 212392737037762406}
-  - component: {fileID: 50893084667617408}
-  - component: {fileID: 61563872182442724}
-  - component: {fileID: 114208344194447854}
-  - component: {fileID: 114301721483468590}
-  - component: {fileID: 114040191475862866}
+  - component: {fileID: 4088045787658846}
+  - component: {fileID: 212761977880746342}
+  - component: {fileID: 50944752289345474}
+  - component: {fileID: 61159436940513156}
+  - component: {fileID: 114912181200856412}
+  - component: {fileID: 114859007187492566}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -32,12 +31,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4467277648119120
+--- !u!4 &4088045787658846
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1855019281337956}
+  m_GameObject: {fileID: 1941683578055380}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9, y: 0, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 0}
@@ -45,13 +44,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50893084667617408
+--- !u!50 &50944752289345474
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1855019281337956}
+  m_GameObject: {fileID: 1941683578055380}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -65,12 +64,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &61563872182442724
+--- !u!61 &61159436940513156
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1855019281337956}
+  m_GameObject: {fileID: 1941683578055380}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -90,51 +89,38 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.14, y: 0.14}
   m_EdgeRadius: 0
---- !u!114 &114040191475862866
+--- !u!114 &114859007187492566
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1855019281337956}
+  m_GameObject: {fileID: 1941683578055380}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0ed45fa81b47ab4295edd39c88a8763, type: 3}
+  m_Script: {fileID: 11500000, guid: 1cc6bb95bd2f94351a4ddd1f323302c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dango: {fileID: 0}
-  zabuton: {fileID: 0}
-  futon: {fileID: 0}
---- !u!114 &114208344194447854
+  bullets:
+  - {fileID: 1667928804395176, guid: e9fce45d6ff154f7084e343ff4477edb, type: 2}
+  equip: 0
+--- !u!114 &114912181200856412
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1855019281337956}
+  m_GameObject: {fileID: 1941683578055380}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8a5e60b1ada13c45b0ddbf780c78867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  dango: {fileID: 0}
---- !u!114 &114301721483468590
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1855019281337956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6ca49b3ed621184a93e1dec54dbb01d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dango: {fileID: 114447525951420994, guid: f45a946be77098c4ba02f8d47ca3751f, type: 2}
---- !u!212 &212392737037762406
+--- !u!212 &212761977880746342
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1855019281337956}
+  m_GameObject: {fileID: 1941683578055380}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0

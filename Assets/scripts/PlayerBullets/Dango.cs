@@ -5,12 +5,12 @@ using UnityEngine;
 public class Dango : MonoBehaviour {
     public float power;
     public float angryPoint;
-    public float speed;
-    public float coolTime;
+    Bullet bullet;
+
 
 	// Use this for initialization
 	void Start () {
-
+        bullet = GetComponent<Bullet>();
 	}
 	
 	// Update is called once per frame
@@ -21,16 +21,9 @@ public class Dango : MonoBehaviour {
     private void FixedUpdate()
     {
         Vector2 pos = transform.position;
-        pos.x += speed * Time.deltaTime;
+        pos.x += bullet.speed * Time.deltaTime;
         transform.position = pos;
     }
 
-    private void OnTriggerExit2D(Collider2D c)
-    {
-        string layerName = LayerMask.LayerToName(c.gameObject.layer);
-        if (layerName == "DestroyArea")
-        {
-            Destroy(gameObject);
-        }
-    }
+
 }
