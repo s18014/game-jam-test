@@ -63,12 +63,12 @@
   <ItemGroup>
     <Compile Include="Assets\scripts\Bullet.cs" />
     <Compile Include="Assets\scripts\BulletManager.cs" />
+    <Compile Include="Assets\scripts\ChageUI.cs" />
     <Compile Include="Assets\scripts\FixedAspectRatio.cs" />
     <Compile Include="Assets\scripts\Player.cs" />
     <Compile Include="Assets\scripts\PlayerBullets\Dango.cs" />
     <Compile Include="Assets\scripts\PlayerBullets\Futon.cs" />
     <Compile Include="Assets\scripts\PlayerBullets\Zabuton.cs" />
-    <Compile Include="Assets\scripts\Text.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>/Users/yuta/github/game-jam-test/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
